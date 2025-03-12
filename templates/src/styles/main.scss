@@ -1,0 +1,348 @@
+@font-face {
+  font-family: 'PT Astra Sans';
+  src: url("PT-Astra-Sans_Regular.ttf") format("opentype");
+}
+
+
+
+$Color1: #163E6C;
+$Color2: #D20A11;
+$Color3: #EBE6D6;
+$margin-main: 1% 0 0 0.5%;
+
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'PT Astra Sans', sans-serif;
+}
+
+@mixin margins () {
+  width: 95%;
+  margin: 1% 2.5% 0 2.5%;
+  border-radius: 0.3em;
+  background-color: $Color3;
+}
+
+header {
+  display: grid;
+  grid-template-columns: 25% 50% 25%;
+  grid-template-rows: 40% 60%;
+  text-align: center;
+  color: $Color1;
+  padding: 4% 0 0.5% 0;
+  font-size: 1.5em;
+  letter-spacing: 0.05em;
+  @include margins;
+}
+
+header > span {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-self: center;
+  align-self: center;
+}
+
+
+header > span:hover {
+  color: $Color2;
+  cursor: pointer;
+  background-color: white;
+  border-radius: 10px;
+}
+
+header > span:first-of-type {
+  width: 80%;
+  height: 200%;
+}
+
+
+header > span:first-of-type > img {
+  width: 100%;
+  height: 100%;
+}
+header > span:first-of-type > img:hover {
+  border-radius: 10px;
+}
+
+
+header > span:nth-of-type(4) {
+  grid-column: span 3;
+  text-align: left;
+  justify-self: flex-start;
+  margin-left: 1%;
+  margin-top: 3%;
+  width: 33%;
+  height: 60%;
+}
+header > span:nth-of-type(3) {
+  width: 90%;
+  margin-right: 1%;
+}
+main {
+  @include margins;
+  padding: 1% 0 1% 0;
+  text-align: left;
+  color: $Color1;
+}
+main > h2 {
+  margin-left: 0.5%;
+}
+main > .search {
+  margin: $margin-main;
+}
+main > .search > label {
+  margin-right: 0.15%;
+}
+main > .search > button {
+  margin-left: 0.3%;
+  width: 4%;
+  //height: 150%;
+  background-color: $Color1;
+  color: $Color3;
+  border-radius: 1em;
+  border: 1px solid black;
+  font-size: 0.8em;
+}
+
+main > .search > button:hover {
+  background-color: $Color3;
+  color: $Color1;
+  cursor: pointer;
+}
+main > .search > input[type = "text"] {
+  color: $Color1;
+  background-color: $Color3;
+  border: 1px solid black;
+  border-radius: 0.2em;
+  padding-left: 0.2%;
+}
+main > .info_machine {
+  margin: $margin-main;
+  font-weight: bold;
+}
+
+main > .new_info {
+  margin: $margin-main;
+  display: flex;
+  flex-direction: column;
+}
+main > .new_info > .error_request {
+  color: $Color2;
+  margin: 1% 0 2% 0;
+  text-align: center;
+}
+
+main > .new_info > label {
+  margin-bottom: 0.2%;
+}
+
+main > .new_info > h2 {
+  margin-bottom: 1%;
+}
+
+main > .new_info > input {
+  width: 40%;
+  margin-bottom: 1%;
+}
+
+main > .new_info > button {
+  width: auto;
+  padding: 0.3%;
+  margin-top: 1%;
+  align-self: center;
+  justify-self: center;
+  background-color: $Color1;
+  border: 1px solid black;
+  color: $Color3;
+  border-radius: 1.4em;
+  font-size: 0.9em;
+}
+
+main > .new_info > button:hover {
+  cursor: pointer;
+  background-color: $Color3;
+  color: $Color1;
+  border: 1px solid black;
+}
+
+main > .new_info > hr {
+  width: 99.5%;
+  margin: 1.5% 0 1.5% 0;
+}
+
+main > .results,
+main > .more {
+  margin-top: 2%;
+  background-color: white;
+  color: $Color2;
+  border: 2px solid $Color1;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  font-size: 0.9em;
+  border-collapse: collapse;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+
+main > table > tbody > tr > td > u:hover {
+  cursor: pointer;
+}
+
+main > .caption {
+  text-align: left;
+  color: $Color1;
+  margin: $margin-main;
+}
+
+main > .results > thead > tr,
+main > .results > tbody > tr,
+main > .more > thead > tr,
+main > .more > tbody > tr {
+  display: flex;
+  flex-direction: column;
+}
+
+
+main > .results > thead > tr > td,
+main > .results > tbody > tr > td,
+main > .more > thead > tr > td,
+main > .more > tbody > tr > td {
+  border: 1px solid $Color1;
+  padding: 1% 0 1% 0;
+  text-align: center;
+}
+
+main > h1 {
+  text-align: center;
+}
+main > .auth {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid $Color1;
+  width: 20%;
+  height: 50%;
+  font-size: 1.8em;
+  margin-left: 40%;
+  margin-top: 1.5%;
+  border-radius: 0.2em;
+}
+
+main > .auth > input {
+  width: 90%;
+  margin: 3% 0 5% 0;
+  border: 1px solid $Color1;
+  border-radius: 0.2em;
+  background-color: $Color3;
+  color: $Color1;
+  padding-left: 1%;
+  font-size: 0.9em;
+}
+
+main > .auth > button  {
+  background-color: $Color1;
+  color: $Color3;
+  width: 20%;
+  border: 1px solid black;
+  font-size: 0.7em;
+  margin-bottom: 2%;
+  border-radius: 0.2em;
+  margin-top: 1.5%;
+}
+
+main > .auth > button:hover {
+  background-color: $Color3;
+  color: $Color1;
+  cursor: pointer;
+}
+main > .auth > .error_login_or_password {
+  color: $Color2;
+  text-align: center;
+  font-size: 0.6em;
+  margin-bottom: 2%;
+}
+main > .go_back {
+  margin: $margin-main;
+  text-decoration: underline;
+  color: $Color1;
+}
+main > .go_back:hover {
+  color: $Color2;
+  cursor: pointer;
+}
+main > .error {
+  margin: $margin-main;
+}
+main > .type_of_information {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-top: 2%;
+}
+
+@mixin type_of_information($backcolor, $color) {
+  justify-self: center;
+  align-self: center;
+  width: 50%;
+  height: 100%;
+  background-color: $backcolor;
+  border: 2px solid $Color1;
+  color: $color;
+  text-align: center;
+  border-radius: 1em;
+  font-size: 0.9em;
+  padding-top: 1%;
+  cursor: pointer;
+}
+
+main > .go_create {
+  color: $Color1;
+  margin: $margin-main;
+  text-decoration: underline;
+  font-size: 1.5em;
+}
+main > .go_create:hover {
+  color: $Color2;
+  cursor: pointer;
+}
+
+main > .type_of_information > span {
+  @include type_of_information(white, $Color1);
+}
+main > .type_of_information > .selected {
+  @include type_of_information($Color2, $Color3);
+}
+
+
+footer {
+  @include margins;
+  color: $Color1;
+  height: 8em;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+footer > h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  justify-self: center;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+footer > h3:hover {
+  color: $Color2;
+  background-color: white;
+  cursor: pointer;
+  border: 2px solid $Color3;
+  border-radius: 0.3em;
+}

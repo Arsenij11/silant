@@ -1,0 +1,4 @@
+venv
+.idea
+templates/.idea
+templates/node_modules
