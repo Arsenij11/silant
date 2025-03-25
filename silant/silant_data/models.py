@@ -4,7 +4,7 @@ from django.db import models
 # Create your models here.
 
 class Machine(models.Model):
-    factory_number = models.CharField(unique=True, max_length=255, primary_key=True)
+    factory_number = models.CharField(unique=True, max_length=255, primary_key=True, verbose_name="Номер машины")
     engine_number = models.CharField(max_length=255)
     transmission_number = models.CharField(max_length=255)
     drive_axle_number = models.CharField(max_length=255)
@@ -17,6 +17,9 @@ class Machine(models.Model):
     client = models.OneToOneField(User, on_delete=models.CASCADE, null=True, related_name='machine')
     service_company = models.OneToOneField('Service_Company', on_delete=models.CASCADE, related_name='machine', null=True)
 
+    class Meta:
+        verbose_name = "Машина"
+        verbose_name_plural = "Машины"
     def __str__(self):
         return 'Номер машины ' + self.factory_number
 

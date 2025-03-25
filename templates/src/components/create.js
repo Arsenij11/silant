@@ -75,11 +75,11 @@ class Create extends React.Component {
      
         return (
             <main>
-                {status === 'Managers' ? <p className="go_create" onClick = {(event) => this.setState({machine : true})}>Внести инфромацию о машине</p> : <p></p>}
-                <p className="go_create" onClick = {(event) => this.setState({to : true})}>Внести инфромацию о ТО</p>
+                {status === 'Managers' ? <p className="go_create" onClick = {(event) => this.setState({machine : true})}>Внести информацию о машине</p> : <p></p>}
+                <p className="go_create" onClick = {(event) => this.setState({to : true})}>Внести информацию о ТО</p>
                 {
                     ['Managers', 'Service_Company'].filter((el) => el === status).length > 0 ? 
-                    <p className="go_create" onClick = {(event) => this.setState({complaint : true})}>Внести инфромацию о рекламации</p> :
+                    <p className="go_create" onClick = {(event) => this.setState({complaint : true})}>Внести информацию о рекламации</p> :
                     <p></p>
                 }
 
